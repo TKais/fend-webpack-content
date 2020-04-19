@@ -8,7 +8,7 @@
     "config-dev": "webpack --config webpack.dev.js",
     "run-dev": "npm run config-dev && webpack-dev-server --config webpack.dev.js",
     "config-prod": "webpack --config webpack.prod.js",
-    "run-prod": "npm run config-prod && webpack-dev-server --config webpack.prod.js" 
+    "run-prod": "npm run config-prod && webpack-dev-server --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -38,6 +38,7 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.4",
     "terser-webpack-plugin": "^2.3.5",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "workbox-webpack-plugin": "^5.1.2"
   }
 }
