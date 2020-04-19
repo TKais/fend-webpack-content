@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/index.js",
-    "build-dev": "webpack-dev-server --config webpack.dev.js --open",
+    "config-dev": "webpack --config webpack.dev.js",
+    "build-dev": "npm run config-dev && webpack-dev-server --config webpack.dev.js",
     "build-prod": "webpack --config webpack.prod.js"
   },
   "keywords": [],
