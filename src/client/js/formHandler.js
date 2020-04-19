@@ -1,16 +1,18 @@
-function handleSubmit(event) {
-    event.preventDefault()
+import checkForName from './nameChecker';
 
-    // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    checkForName(formText)
-
-    console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
+function _updateUI(data) {
+  document.getElementById('results').innerHTML = data.message;
 }
 
-export { handleSubmit }
+export default function handleSubmit(event) {
+  event.preventDefault();
+
+  // check what text was put into the form field
+  const formText = document.getElementById('name').value;
+  checkForName(formText);
+
+  console.log('::: Form Submitted :::');
+  fetch('http://localhost:8080/test')
+    .then(res => res.json())
+    .then(res => _updateUI(res));
+}
