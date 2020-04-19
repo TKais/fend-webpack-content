@@ -4,3 +4,8 @@ import './styles/index.scss';
 
 console.log(checkForName);
 console.log(handleSubmit);
+
+export {
+  checkForName,
+  handleSubmit,
+};
